@@ -2,20 +2,23 @@ import './App.css'
 import { useState } from 'react';
 
 function App() {
-  let [newGreeting, setNewGreeting] = useState('Hello world!');
-  let changedContent = 'Hello there!';
+
+  const [greeting, setGreeting] = useState();
   let clicked = false;
-  function changeContent() 
-  {
-    changedContent = newGreeting;
-    console.log('test');
-    setNewGreeting();
+  function handleClick(newGreeting) {
+    function displayGreeting() {
+      return <h1>{newGreeting}</h1>;
+    }
+    setGreeting(displayGreeting);
   }
 
   return <div>
-    <h1>{clicked ? changedContent : newGreeting }</h1>
-    <button onClick={() => changeContent}>change</button>
-  </div>;
+    {!greeting ? <h1>Select a button!</h1>: greeting}
+    <button onClick={() => handleClick('Hello there!')}>Hello there!</button>
+    <button onClick={() => handleClick('Hello you!')}>Hello you!</button>
+    <button onClick={() => handleClick('Hello man!')}>Hello man!</button>
+    <button onClick={() => handleClick('Hello world!')}>Hello world!</button>
+  </div>
 }
 
 export default App
