@@ -1,0 +1,21 @@
+STRUCTURED WRITING
+
+Stepps and features:
+
+    [] - creating a book-project
+        [] - add title
+        [] - display list of projects in sitebar left
+        [] - add plot-description
+        [] - 
+
+    [] - form to create a chapter
+    [] - form to create a characters
+        [] - Name
+        [] - kind of character (main, side etc)
+        [] - special characteristics
+        [] - biggest problems and development (as a list?)
+    
+    [] - link characters in text / description /other characters
+    [] - 
+    [] - 
+    [] - 
