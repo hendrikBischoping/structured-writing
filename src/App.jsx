@@ -1,28 +1,29 @@
 import './App.css'
-import { Children, useState } from 'react';
+import { useState } from 'react';
 import Header from './components/header/Header.jsx';
 import SectionNav from './components/section-vav/SectionNav.jsx';
 import MainContent from './components/main-content/MainContent.jsx';
 
 function App() {
 
-  const [greeting, setGreeting] = useState();
-  function onOpenSection(newGreeting) {
-    function displayGreeting() {
-      return <h1>{newGreeting}</h1>;
-    }
-    setGreeting(displayGreeting);
+  let SECTIONS = {
+    'choose-a-topic': 'Choose a Topic!',
+    'new-project': 'New Project!',
+    'my-projects': 'My Projects!'
   }
+
+  const [ chosenContent, setChosenContent ] = useState('choose-a-topic')
   
-  function onSelectSection(x) {
-    console.log(x);
+  function onSelectSection(chosenSection) {
+    // console.log(chosenSection);
+    setChosenContent(chosenSection);
   }
 
   return <div id='general-content'>
     <Header></Header>
     <div id='app-content'>
       <SectionNav onOpenSection={(w) => onSelectSection(w)}></SectionNav>
-      <MainContent></MainContent>
+      <MainContent>{SECTIONS[chosenContent]}</MainContent>
     </div>
   </div>
 }

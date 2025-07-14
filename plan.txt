@@ -2,8 +2,8 @@ STRUCTURED WRITING
 
 basic app-structure
 
-    [] - header
-    [] - sidebar/navbar (left)
+    [x] - header
+    [x] - sidebar/navbar (left)
         [] - create new project
     [] - dynamic app-content rendered on the right (main)
 

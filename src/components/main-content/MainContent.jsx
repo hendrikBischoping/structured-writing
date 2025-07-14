@@ -1,12 +1,9 @@
-import NavButton from "../buttons/Buttons"
-import { useState } from 'react';
+import './MainContent.css';
 
-export default function MainContent() {
-    const [appSection, setAppSection] = useState();
-
-    return <div>
-        <h2> works</h2>
-        {!appSection ? <h1>Select a Section!</h1> : appSection}
-        <NavButton onSelect={() => onSelectSection('test')}>Section 1</NavButton>
+export default function MainContent(props) {
+    
+    return <div id="main-content">
+        {/* <h2 id="main-content-hl">This is the main content!</h2> */}
+        <h2 id="main-content-hl">{props.children}</h2>
     </div>
 }
