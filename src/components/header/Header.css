@@ -1,0 +1,11 @@
+:root {
+  --dark-drey: #242424;
+}
+
+#header-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6rem;
+    background-color: #505050;
+}

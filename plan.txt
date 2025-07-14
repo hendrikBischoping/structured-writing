@@ -1,5 +1,13 @@
 STRUCTURED WRITING
 
+basic app-structure
+
+    [] - header
+    [] - sidebar/navbar (left)
+        [] - create new project
+    [] - dynamic app-content rendered on the right (main)
+
+
 Stepps and features:
 
     [] - creating a book-project

@@ -1,0 +1,15 @@
+li {
+    list-style: none;
+    padding: 2rem;
+}
+
+#nav-button {
+    background-color: unset;
+    border: none;
+    color: lightgrey;
+}
+
+#nav-button:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}

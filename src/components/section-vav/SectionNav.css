@@ -1,0 +1,7 @@
+#section-nav{
+    width: fit-content;
+    height: calc(100vh - 6rem);
+    padding: 4rem;
+    background-color: #202020;
+    color: lightgrey;
+}

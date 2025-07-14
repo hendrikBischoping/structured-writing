@@ -1,23 +1,29 @@
 import './App.css'
-import { useState } from 'react';
+import { Children, useState } from 'react';
+import Header from './components/header/Header.jsx';
+import SectionNav from './components/section-vav/SectionNav.jsx';
+import MainContent from './components/main-content/MainContent.jsx';
 
 function App() {
 
   const [greeting, setGreeting] = useState();
-  let clicked = false;
-  function handleClick(newGreeting) {
+  function onOpenSection(newGreeting) {
     function displayGreeting() {
       return <h1>{newGreeting}</h1>;
     }
     setGreeting(displayGreeting);
   }
+  
+  function onSelectSection(x) {
+    console.log(x);
+  }
 
-  return <div>
-    {!greeting ? <h1>Select a button!</h1>: greeting}
-    <button onClick={() => handleClick('Hello there!')}>Hello there!</button>
-    <button onClick={() => handleClick('Hello you!')}>Hello you!</button>
-    <button onClick={() => handleClick('Hello man!')}>Hello man!</button>
-    <button onClick={() => handleClick('Hello world!')}>Hello world!</button>
+  return <div id='general-content'>
+    <Header></Header>
+    <div id='app-content'>
+      <SectionNav onOpenSection={(w) => onSelectSection(w)}></SectionNav>
+      <MainContent></MainContent>
+    </div>
   </div>
 }
 
